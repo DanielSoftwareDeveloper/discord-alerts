@@ -8,6 +8,9 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  transitionTimingFunction: {
+    "custom-ease": "cubic-bezier(0.19, 1, 0.22, 1)",
+  },
   theme: {
     extend: {
       fontFamily: {
@@ -15,21 +18,20 @@ const config: Config = {
       },
       colors: {
         brand: {
-          "25": "#F8F9FD",
-          "50": "#F0F4FA",
-          "100": "#E1E9F6",
-          "200": "#C3D3ED",
-          "300": "#A5BDE4",
-          "400": "#87A7DB",
-          "500": "#6991D2",
-          "600": "#4B76C9",
-          "700": "#3659B1",
-          "800": "#284189",
-          "900": "#1B2A61",
-          "950": "#111A3E",
+          "50": "#EEF2FF",
+          "100": "#E0E7FF",
+          "200": "#C7D2FE",
+          "300": "#A5B4FC",
+          "400": "#818CF8",
+          "500": "#6366F1",
+          "600": "#4F46E5",
+          "700": "#4338CA",
+          "800": "#3730A3",
+          "900": "#312E81",
+          "950": "#1E1B4B",
         },
         "discord-background": "#36393f",
-		"discord-brand-color": "#5865f2",
+        "discord-brand-color": "#5865f2",
         "discord-gray": "#36393f",
         "discord-text": "#dcddde",
         "discord-timestamp": "#72767d",
