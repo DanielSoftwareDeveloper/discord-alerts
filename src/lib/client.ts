@@ -2,7 +2,7 @@ import { AppType } from "@/server"
 import { hc } from "hono/client"
 import { HTTPException } from "hono/http-exception"
 import type { ContentfulStatusCode } from "hono/utils/http-status"
-import superjson from "superjson"
+import superjson from 'superjson'
 
 const getBaseUrl = () => {
   // browser should use relative path
@@ -32,6 +32,8 @@ export const baseClient = hc<AppType>(getBaseUrl(), {
 
     response.json = async () => {
       const text = await response.text()
+
+      const superjson = await import('superjson').then(mod => mod.default)
 
       if (contentType === "application/superjson") {
         return superjson.parse(text)
